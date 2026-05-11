@@ -10,22 +10,34 @@ window.onload = function () {
 };
 
 function addRequest() {
-  const subject = document.getElementById("subject").value;
-  const duration = document.getElementById("duration").value;
+  const subjectInput = document.getElementById("subject");
+  const durationInput = document.getElementById("duration");
 
+  const subject = subjectInput.value.trim();
+  const duration = durationInput.value.trim();
+
+  // ולידציה: שדות ריקים
   if (!subject || !duration) {
     alert("Please fill all fields");
     return;
   }
 
+  if (isNaN(duration) || Number(duration) <= 0) {
+    alert("Duration must be a positive number");
+    return;
+  }
+
   const request = {
     subject: subject,
-    duration: duration
+    duration: Number(duration)
   };
 
   requests.push(request);
 
   localStorage.setItem("requests", JSON.stringify(requests));
+
+  subjectInput.value = "";
+  durationInput.value = "";
 
   displayRequests();
 }
@@ -36,7 +48,7 @@ function displayRequests() {
 
   requests.forEach(req => {
     const li = document.createElement("li");
-    li.textContent = req.subject + " - " + req.duration + " minutes";
+    li.textContent = `${req.subject} - ${req.duration} minutes`;
     list.appendChild(li);
   });
 }
