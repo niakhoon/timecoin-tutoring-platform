@@ -1,6 +1,6 @@
 # TimeCoin Tutoring Platform
 
-A web-based platform that allows students to exchange tutoring sessions using time-based credits instead of money.
+A web based platform that allows students to exchange tutoring sessions using time based credits instead of money.
 
 ## Features (Current)
 - Create and display lesson requests
@@ -18,4 +18,4 @@ A web-based platform that allows students to exchange tutoring sessions using ti
 - SQL database for persistence
 
 ## Goal
-This project is designed to simulate real-world system design, including user flows, data modeling, and marketplace logic.
+This project is designed to simulate real world system design, including user flows, data modeling, and marketplace logic.
