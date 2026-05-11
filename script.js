@@ -16,7 +16,6 @@ function addRequest() {
   const subject = subjectInput.value.trim();
   const duration = durationInput.value.trim();
 
-  // ולידציה: שדות ריקים
   if (!subject || !duration) {
     alert("Please fill all fields");
     return;
@@ -51,4 +50,10 @@ function displayRequests() {
     li.textContent = `${req.subject} - ${req.duration} minutes`;
     list.appendChild(li);
   });
+
+  document.getElementById("duration").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    addRequest();
+  }
+});
 }
