@@ -1,6 +1,6 @@
 # TimeCoin Tutoring Platform
 
-A platform where students exchange tutoring sessions using time-based credits instead of money.
+A platform where students exchange tutoring sessions using time based credits instead of money.
 
 ## Current Progress
 Basic frontend for creating and displaying lesson requests.
